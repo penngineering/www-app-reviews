@@ -10,9 +10,9 @@ import StoolAndStars from '../assets/StoolAndStars.vue';
       <span class="divider"></span>
       <span class="navbar-title">Reviews</span>
     </div>
-    <div class="right">
-      <StoolAndStars />
-    </div>
+  </div>
+  <div class="right">
+    <StoolAndStars />
   </div>
 </template>
 
@@ -52,6 +52,14 @@ import StoolAndStars from '../assets/StoolAndStars.vue';
 .navbar-title {
   font-size: 22px;
   color: #ffffff;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 90px;
+  overflow: hidden;
 }
 
 .right > svg {

@@ -1,5 +1,15 @@
 <script setup>
+import { ref, onBeforeUnmount, onMounted } from 'vue';
 import Navbar from './components/Navbar.vue';
+import { REFRESH_INTERVAL } from './constants';
+
+const timer = setInterval(() => {
+  location.reload();
+}, REFRESH_INTERVAL);
+
+onBeforeUnmount(() => {
+  clearInterval(timer);
+});
 </script>
 
 <template>
@@ -11,7 +21,7 @@ import Navbar from './components/Navbar.vue';
 
 <style>
 .app-reviews-container {
-  background-color: #1F2937;
+  background-color: #1f2937;
   padding: 16px;
   padding-left: 32px;
   padding-right: 32px;
